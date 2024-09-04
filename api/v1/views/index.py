@@ -4,6 +4,7 @@
 
 from api.v1.views import app_views
 from flask import jsonify
+from models import storage
 
 
 @app_views.route('/status', strict_slashes=False)
@@ -13,8 +14,8 @@ def api_status():
 
 
 @app_views.route('/stats', strict_slashes=False)
-def object_stats():
-    """returns the count of each object"""
+def get_stats():
+    """Retrieve the number of each object"""
     stats = {
             "amenities": storage.count("Amenity"),
             "cities": storage.count("City"),
