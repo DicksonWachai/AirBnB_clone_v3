@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Handles all restful API actions for State"""
+""" Handles all restful API actions for Cities"""
 
 from api.v1.views import app_views
 from flask import request, jsonify, abort
